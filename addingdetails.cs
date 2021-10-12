@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AddressBookProgram
-    {
-        class ContactDetails
-        {
+{
+      class ContactDetails
+      {
             List<Contact> contactlist = new List<Contact>();
             public void AddContact()
             {
@@ -39,21 +39,21 @@ namespace AddressBookProgram
                     Console.WriteLine(con.FirstName + "  " + con.Phone + "  " + con.Address + "  " + con.City + "  " + con.State + "  " + con.Zip);
                 }
             }
-        // uc-3 edit existing contact person using their name
-        public void EditContact()
-        {
+             // uc-3 edit existing contact person using their name
+            public void EditContact()
+            {
             //I am using console to edit the person details
             Console.WriteLine(" enter firstName to modify contact details of a person ");
             string UserFirstname = Console.ReadLine();
-            foreach (Contact con in contactlist)
-            {
+               foreach (Contact con in contactlist)
+               {
                 // Console.WriteLine(con.FirstName + "  " + con.Phone + "  " + con.Address + "  " + con.City + "  " + con.State + "  " + con.Zip);
-                if (con.FirstName.Equals(UserFirstname))
-                {
+                   if (con.FirstName.Equals(UserFirstname))
+                   {
                     Console.WriteLine("what data u want to edit,press first character only  of that field");
                     char userinput = char.Parse(Console.ReadLine());
-                    switch (userinput)
-                    {
+                       switch (userinput)
+                       {
                         case 'a':
                             Console.WriteLine(" enter address");
                             con.Address = Console.ReadLine();
@@ -88,12 +88,27 @@ namespace AddressBookProgram
                         default:
                             Console.WriteLine("wrong input ");
                             break;
-                    }
-                }
+                       }
+                   }
+               }
             }
-        }
-    }
+        //UC4-deleting contact details
+          public void DeleteContact()
+          {
+            Console.WriteLine(" enter firstName to delete the contact ");
+            string UserFirstname = Console.ReadLine();
+             foreach (Contact contact in contactlist)
+             {
+                // Console.WriteLine(contact.FirstName + "  " + contact.Phone + "  " + contact.Address + "  " + contact.City + "  " + contact.State + "  " + contact.Zip);
+                if (contact.FirstName.Equals(UserFirstname))
+                {
+                    contactlist.Remove(contact);
+                    break;
+                }
 
+             }
+          }
+      }
 }
 
 

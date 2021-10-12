@@ -16,12 +16,17 @@ namespace AddressBookProgram
             //UC2-Add Contact Details
             ContactDetails contactDetails = new ContactDetails();
             contactDetails.AddContact();
+            contactDetails.Display();
 
             //UC3-Editing Contact Details
              contactDetails.EditContact();
+            contactDetails.Display();
+
+            //uc4-Deleting Contact Details
+            contactDetails.DeleteContact();
+            contactDetails.Display();
+
          }
     }
     
 }
-    
-
