@@ -28,6 +28,6 @@ namespace AddressBookProgram
             State = state;
             Zip = zip;
         }
-
+        
     }
 }

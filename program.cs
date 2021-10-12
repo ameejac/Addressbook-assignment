@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace AddressBookProgram
 {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                Console.WriteLine("Welcome to Address book program");
-            //UC2-Add Contact Details
+    class Program
+    {
+         static void Main(string[] args)
+         {
 
+            Console.WriteLine("Welcome to Address book program");
+
+            //UC2-Add Contact Details
             ContactDetails contactDetails = new ContactDetails();
             contactDetails.AddContact();
 
-
-        }
+            //UC3-Editing Contact Details
+             contactDetails.EditContact();
+         }
     }
     
 }
